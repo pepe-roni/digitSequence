@@ -1,6 +1,6 @@
 void setup()
 {
-  println(sequenceNum(90));
+  println(numCount("1528152156111",1));
   //for(int n=0; n<100; n++;)
   //{
      
