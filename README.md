@@ -1,0 +1,2 @@
+# digitSequence
+finding lim t=?
