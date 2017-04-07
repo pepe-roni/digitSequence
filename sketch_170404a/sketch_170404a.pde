@@ -1,5 +1,4 @@
-int[] numInput = new int[100];
-int requestSequence = 2;
+int requestSequence = 100;
 int sequence = 0;
 void setup()
 {
@@ -7,9 +6,8 @@ void setup()
   background(0,0,0);
   noStroke();
   rectMode(CENTER);
-  println(numCount("1528152156111",1));
-  println(11);
-  sequenceNum(11);
+  println("The Digit Sequence || A non-mathmatical sequence from the gates of hell.");
+  sequenceNum(1);
 }
 
 void draw()
@@ -20,28 +18,31 @@ void draw()
   textAlign(CENTER, CENTER);
 }
 
+
+
 public void sequenceNum(int num)
 {
-  int[] numInput = new int[10];
-  int nextInput = 0;
-  for(int i=9; i>0; i--)
+  int[] numInput = new int[100];
+  String nextInput = "";
+  String recursiveInput = "";
+  int recursiveOutput = 0;
+  print(" || Input: " +num+ " || Output: ");
+  for(int i=15; i>0; i--)
   {
    numInput[i] = numCount(str(num), i);
    if(numInput[i] != 0){
-     nextInput = parseInt(str(numInput[i]) + str(i));
+     nextInput = str(numInput[i]) + str(i);
+     recursiveInput = recursiveInput + nextInput;
+    recursiveOutput = int(recursiveInput);
    }
   }
-  print(nextInput);
+   println(recursiveInput + " || Index: " + sequence);
+
   if(sequence != requestSequence)
   {
-    println();
     sequence++;
-    sequenceNum(nextInput);
+    sequenceNum(recursiveOutput);
   }
-  //for(int sequence = 0; sequence != requestSequence; sequence++)
-  //{
-  //  sequenceNum(nextInput);
-  //}
 }
 
 public int numCount(String agrs, int num)
