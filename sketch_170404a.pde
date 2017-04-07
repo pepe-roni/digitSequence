@@ -1,7 +1,7 @@
 void setup()
 {
   size(500,500);
-  background(255,255,255);
+  background(#056f68);
   noStroke();
   rectMode(CENTER);
   sequenceNum(1);
@@ -36,7 +36,7 @@ public void sequenceNum(int num)
    }
   }
   exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
-   fill(0);
+   fill(255);
 
    text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
   y=y+20;
