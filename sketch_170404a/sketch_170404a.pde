@@ -1,11 +1,9 @@
-
 void setup()
 {
   size(500,500);
   background(255,255,255);
   noStroke();
   rectMode(CENTER);
-  println("The Digit Sequence || A non-mathmatical sequence from the gates of hell.");
   sequenceNum(1);
 }
 int y =40;
