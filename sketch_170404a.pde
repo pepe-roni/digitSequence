@@ -1,24 +1,23 @@
-
 void setup()
 {
   size(500,500);
-  background(0,0,0);
+  background(255,255,255);
   noStroke();
   rectMode(CENTER);
-  println("The Digit Sequence || A non-mathmatical sequence from the gates of hell.");
   sequenceNum(1);
 }
+int y =40;
 
 void draw()
-{
-  fill(0, 30);
-  rect(0, 0, 700, 700);
+{  
   textSize(15);
   textAlign(CENTER, CENTER);
+  sequenceNum(1); 
 }
 
-int requestSequence = 10000;
+int requestSequence = 100;
 int sequence = 0;
+String exportString = "";
 
 public void sequenceNum(int num)
 {
@@ -26,7 +25,7 @@ public void sequenceNum(int num)
   String nextInput = "";
   String recursiveInput = "";
   int recursiveOutput = 0;
-  print(" || Input: " +num+ " || Output: ");
+ // text(" || Input: " +num+ " || Output: ", 0,y);
   for(int i=15; i>0; i--)
   {
    numInput[i] = numCount(str(num), i);
@@ -36,8 +35,11 @@ public void sequenceNum(int num)
     recursiveOutput = int(recursiveInput);
    }
   }
-   println(recursiveInput + " || Index: " + sequence);
+  exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
+   fill(0);
 
+   text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
+  y=y+20;
   if(sequence != requestSequence)
   {
     sequence++;
