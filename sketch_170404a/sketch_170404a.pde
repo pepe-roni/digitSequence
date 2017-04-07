@@ -1,5 +1,4 @@
-int requestSequence = 100;
-int sequence = 0;
+
 void setup()
 {
   size(500,500);
@@ -18,7 +17,8 @@ void draw()
   textAlign(CENTER, CENTER);
 }
 
-
+int requestSequence = 10000;
+int sequence = 0;
 
 public void sequenceNum(int num)
 {
