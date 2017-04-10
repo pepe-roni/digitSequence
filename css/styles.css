@@ -8,7 +8,13 @@ html{
   -webkit-font-smoothing: antialiased;
 }
 
-
+canvas{
+  font-weight: 900;
+color: rgba(11, 236, 228, 0.88);
+-webkit-transition: color 0.7s ease;
+-moz-transition: color 0.7s ease;
+transition: color 0.7s ease;
+}
 
 @font-face {
   font-family: "mainFont";
