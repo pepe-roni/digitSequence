@@ -1,6 +1,6 @@
 void setup()
 {
-  size(500,500);
+  size(500,2200);
   background(#056f68);
   noStroke();
   rectMode(CENTER);
@@ -9,10 +9,10 @@ void setup()
 int y =40;
 
 void draw()
-{  
+{
   textSize(15);
   textAlign(CENTER, CENTER);
-  sequenceNum(1); 
+  sequenceNum(1);
 }
 
 int requestSequence = 100;
@@ -57,4 +57,3 @@ public int numCount(String agrs, int num)
   }
   return count;
 }
-    
