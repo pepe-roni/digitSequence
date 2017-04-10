@@ -1,10 +1,14 @@
+PFont slim;
 void setup()
 {
+  smooth();
+  slim = createFont("/fonts/Roboto-LightItalic.ttf",14);
   size(500,500);
   background(255,255,255);
   noStroke();
   rectMode(CENTER);
   sequenceNum(1);
+  textFont(slim);
 }
 int y =40;
 
@@ -37,7 +41,7 @@ public void sequenceNum(int num)
   }
   exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
    fill(0);
-
+  textFont(slim);
    text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
   y=y+20;
   if(sequence != requestSequence)
