@@ -9,8 +9,8 @@ html{
 }
 
 canvas{
-  width: 15vh;
-  height: 6vh;
+  width: 50vh;
+  height:100vh;
   font-weight: 900;
 color: rgba(0);
 -webkit-transition: color 0.7s ease;
