@@ -41,7 +41,7 @@ public void sequenceNum(int num)
   exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
    fill(255);
 
-
+  textSize(100);
    fill(0);
   //textFont(slim);
    text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
