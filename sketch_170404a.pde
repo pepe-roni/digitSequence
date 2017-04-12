@@ -1,10 +1,22 @@
+<<<<<<< HEAD
 void setup()
 {
+=======
+//PFont slim;
+void setup()
+{
+ // smooth();
+ // slim = createFont("/fonts/Roboto-LightItalic.ttf",14);
+>>>>>>> f9161b7b00e86d37f7a20fe36e5db5d33b5c075f
   size(500,2100);
   background(#056f68);
   noStroke();
   rectMode(CENTER);
   sequenceNum(1);
+<<<<<<< HEAD
+=======
+  //textFont(slim);
+>>>>>>> f9161b7b00e86d37f7a20fe36e5db5d33b5c075f
 }
 int y =40;
 
@@ -36,8 +48,13 @@ public void sequenceNum(int num)
    }
   }
   exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
+<<<<<<< HEAD
    fill(255);
 
+=======
+   fill(0);
+  //textFont(slim);
+>>>>>>> f9161b7b00e86d37f7a20fe36e5db5d33b5c075f
    text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
   y=y+20;
   if(sequence != requestSequence)
