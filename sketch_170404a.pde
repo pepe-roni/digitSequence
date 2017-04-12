@@ -3,7 +3,7 @@ void setup()
 {
   smooth();
   slim = createFont("/fonts/Roboto-LightItalic.ttf",14);
-  size(500,500);
+  size(500,2100);
   background(255,255,255);
   noStroke();
   rectMode(CENTER);
@@ -13,10 +13,10 @@ void setup()
 int y =40;
 
 void draw()
-{  
+{
   textSize(15);
   textAlign(CENTER, CENTER);
-  sequenceNum(1); 
+  sequenceNum(1);
 }
 
 int requestSequence = 100;
@@ -61,4 +61,3 @@ public int numCount(String agrs, int num)
   }
   return count;
 }
-    
