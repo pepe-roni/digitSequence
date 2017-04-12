@@ -2,7 +2,7 @@ void setup()
 {
  // smooth();
  // slim = createFont("/fonts/Roboto-LightItalic.ttf",14);
-  size(500,2100);
+  size(750,2100);
   background(#056f68);
   noStroke();
   rectMode(CENTER);
@@ -41,7 +41,7 @@ public void sequenceNum(int num)
   exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
    fill(255);
 
-  textSize(100);
+
    fill(0);
   //textFont(slim);
    text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
