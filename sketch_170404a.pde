@@ -1,7 +1,7 @@
-PFont slim;
+//PFont slim;
 void setup()
 {
-  smooth();
+ // smooth();
  // slim = createFont("/fonts/Roboto-LightItalic.ttf",14);
   size(500,2100);
   background(255,255,255);
