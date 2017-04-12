@@ -13,7 +13,7 @@ int y =40;
 
 void draw()
 {
-  textSize(15);
+  textSize(36);
   textAlign(CENTER, CENTER);
   sequenceNum(1);
 }
