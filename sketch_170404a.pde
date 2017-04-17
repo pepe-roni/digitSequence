@@ -1,47 +1,61 @@
 PFont slim;
+int userDefined = 1;
+
 void setup()
 {
- slim = createFont("/fonts/Roboto-ThinItalic.ttf",14);
-  size(500,2100);
-  background(#056f68);
+  slim = createFont("/fonts/Roboto-MediumItalic.ttf",14);
+  size(500,2500);
   noStroke();
+  background(0);
   rectMode(CENTER);
-  sequenceNum(1);
 }
-int y =40;
 
 void draw()
 {  
+  fill(25,200,255);
+  textFont(slim);
   textSize(15);
-  textAlign(CENTER, CENTER);
-  sequenceNum(1); 
+  text(" || First Term: " +userDefined+ " || Index: 1", 0,y);
+  sequenceNum(userDefined); 
 }
 
-int requestSequence = 100;
+void mousePressed()
+{
+  background(0);
+  userDefined=userDefined+1;
+  y = 20;
+  sequence = 0;
+}
+
+int requestSequence = 1000;
 int sequence = 0;
 String exportString = "";
+int y = 20;
 
 public void sequenceNum(int num)
 {
-  int[] numInput = new int[100];
+  
+  int[] numInput = new int[1000];
   String nextInput = "";
   String recursiveInput = "";
   int recursiveOutput = 0;
- // text(" || Input: " +num+ " || Output: ", 0,y);
-  for(int i=15; i>0; i--)
+ 
+  for(int i=9; i>0; i--)
   {
    numInput[i] = numCount(str(num), i);
-   if(numInput[i] != 0){
+   if(numInput[i] != 0 || (numInput[i-1] !=0 && numInput[i+1] !=0))
+   {
      nextInput = str(numInput[i]) + str(i);
      recursiveInput = recursiveInput + nextInput;
     recursiveOutput = int(recursiveInput);
    }
   }
-  exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
-   fill(255);
-  textFont(slim);
-   text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1), 0,y);
-  y=y+20;
+    exportString = " || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+1);
+  
+    fill(25,200,255);
+    textFont(slim);
+    y=y+20;
+    text(" || Input: " +num+ " || Output: "+ recursiveInput + " || Index: " + int(sequence+2),0,y);
   if(sequence != requestSequence)
   {
     sequence++;
