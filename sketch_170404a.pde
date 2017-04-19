@@ -4,7 +4,7 @@ int userDefined = 1;
 void setup()
 {
   slim = createFont("/fonts/Roboto-MediumItalic.ttf",14);
-  size(500,2500);
+  size(500,2550);
   noStroke();
   background(0);
   rectMode(CENTER);
@@ -15,7 +15,10 @@ void draw()
   fill(25,200,255);
   textFont(slim);
   textSize(15);
+  //prints the first term in the sequence
+  //userDefined is the chosen first term
   text(" || First Term: " +userDefined+ " || Index: 1", 0,y);
+  //calls for the first term used to create a sequence and list
   sequenceNum(userDefined); 
 }
 
