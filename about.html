@@ -17,6 +17,23 @@
 		</ul>
 		<div class="v-center">
 			<a style="font-size:6vh; font-weight:500;" href = "index.html">Digit Sequence</a>
+			<p style= "font-size:3vh; font-weight:500;">How it Works</p>
+			<p style="font-size:2.5vh; font-weight:500;">
+				The algorithims below are the heart of this program.<br>
+sequenceNum takes an arguement num, in this case it is userDefined<br>
+sequenceNum is a recursive function that runs the sequencing until the amount of cycles requested is met <br>
+the actual sequencing is preformed within the for loop, loading the array with the count <br>
+of each digit in num by calling the function numCount. If the count of the digit (starting from digit 9) <br>
+does not return zero, multiple variables are set for parsing, displaying, and calling recursion.<br>
+<br>
+sequence and requestSequence are used as controls to prevent an infinite loop and effectively enable recursion.<br>
+Abstraction as the recursive function eliminates many lines of code and makes for a more efficient program.<br>
+<br>
+
+Overall the sequence takes the number and returns the count of each digit read. <br>
+If 1 is the first term, the second is 11 because there is a single digit of 1.<br>
+Term three is 21 because there are two counts of 1. The fourth term is 1211 <br>
+because there is one count of 2, and one count of 1.<br></p>
 			<div style="overflow-y: scroll; height: 50vh; text-align:left; color: #a4f7af;"><code style ="font-size:2vh;font-weight:400 text-align:left"><pre>
 public void sequenceNum(int num)
 {
